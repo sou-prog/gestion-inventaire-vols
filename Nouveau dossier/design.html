@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Vols</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <header>
+        <h1>Gestion des Vols</h1>
+        <nav>
+            <ul>
+                <li><a href="#vols">Vols</a></li>
+                <li><a href="#passagers">Passagers</a></li>
+                <li><a href="#reservations">Réservations</a></li>
+                <li><a href="#equipage">Équipage</a></li>
+                <li><a href="#aeroports">Aéroports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="vols">
+            <h2>Gestion des Vols</h2>
+            <button onclick="ajouterVol()">Ajouter un Vol</button>
+            <div id="liste-vols"></div>
+        </section>
+
+        <section id="passagers">
+            <h2>Gestion des Passagers</h2>
+            <button onclick="ajouterPassager()">Ajouter un Passager</button>
+            <div id="liste-passagers"></div>
+        </section>
+
+        <section id="reservations">
+            <h2>Gestion des Réservations</h2>
+            <button onclick="ajouterReservation()">Ajouter une Réservation</button>
+            <div id="liste-reservations"></div>
+        </section>
+
+        <section id="equipage">
+            <h2>Gestion de l'Équipage</h2>
+            <button onclick="ajouterEquipage()">Ajouter un Équipage</button>
+            <div id="liste-equipage"></div>
+        </section>
+
+        <section id="aeroports">
+            <h2>Gestion des Aéroports</h2>
+            <button onclick="ajouterAeroport()">Ajouter un Aéroport</button>
+            <div id="liste-aeroports"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gestion des Vols</p>
+    </footer>
+
+    <script src="design.js"></script>
+</body>
+</html>
