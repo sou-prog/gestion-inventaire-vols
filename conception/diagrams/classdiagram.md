@@ -100,3 +100,4 @@ User <|-- Admin
     Admin "1.1" --> "1..*"Membre_equipage  : gerer
     
     Passager "1.1*" --> "1..*" Reservation : faire 
+```
