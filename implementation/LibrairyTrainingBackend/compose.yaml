@@ -1,0 +1,32 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    container_name: library_database
+    environment:
+      - 'POSTGRES_DB=library_database'
+      - 'POSTGRES_PASSWORD=secret'
+      - 'POSTGRES_USER=root'
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data  # Relative path to store PostgreSQL data
+    networks:
+      - app-network
+
+  # jenkins:
+  #   image: 'jenkins/jenkins:lts'
+  #   container_name: jenkins
+  #   ports:
+  #     - '8080:8080'   # Jenkins web interface
+  #     - '50000:50000' # Jenkins agent communication
+  #   volumes:
+  #     - ./jenkins_home:/var/jenkins_home  # Relative path to store Jenkins data
+  #     - /var/run/docker.sock:/var/run/docker.sock  # Mount Docker socket from host
+  #   environment:
+  #     - JENKINS_OPTS=--httpPort=8080  # Set Jenkins HTTP port
+  #   networks:
+  #     - app-network
+
+networks:
+  app-network:
+    driver: bridge

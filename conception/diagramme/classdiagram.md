@@ -1,6 +1,6 @@
 ```mermaid
 classDiagram
-    User <|-- Admin
+User <|-- Admin
     User <|-- Passager
     User : - email
     User : -password
@@ -93,4 +93,10 @@ classDiagram
 
     Vol "1.1*" --> "1..*" Membre_equipage : avoir
     
-    Vol "1.1*" --> "1..*" Reservati
+    Vol "1.1*" --> "1..*" Reservation : possede
+    
+    Admin "1.1" --> "1..*"Vol  : gerer
+
+    Admin "1.1" --> "1..*"Membre_equipage  : gerer
+    
+    Passager "1.1*" --> "1..*" Reservation : faire 
