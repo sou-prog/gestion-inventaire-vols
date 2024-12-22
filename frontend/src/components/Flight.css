@@ -1,0 +1,116 @@
+/* Container */
+.flight-body{
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("./bk.jpg") no-repeat ;
+  background-position: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: auto;
+}
+.container2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 450px; /* Augmenté pour un formulaire plus large */
+  width: 100%;
+  margin-top: 40px; /* Espace au sommet pour l'aligner plus bas */
+  padding: 20px;
+  background-color:transparent; /* Fond légèrement gris clair */
+  border-radius: 10px; /* Coins arrondis pour un aspect plus moderne */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre subtile pour le conteneur */
+  border: 1px solid #ddd;
+}
+
+/* Formulaire */
+.form2 {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent; /* Fond blanc pour le formulaire */
+  /* Bordure légère et élégante */
+  padding: 30px 40px; /* Plus de padding pour un formulaire aéré */
+  border-radius: 8px;
+  width: 100%;
+  margin-top: -20px;
+}
+
+/* Labels */
+.label {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #ffffff; /* Couleur de texte plus sombre pour une meilleure lisibilité */
+  font-weight: 600; /* Un peu plus de poids pour le texte */
+  gap: 10px;
+}
+
+/* Inputs */
+.input {
+  padding: 12px;
+  margin-bottom: 15px; /* Plus d'espacement pour un formulaire plus aéré */
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition douce */
+}
+
+/* Focus sur les inputs */
+.input:focus {
+  outline: none;
+  border-color: #76b578; /* Bordure verte lorsque le champ est sélectionné */
+  box-shadow: 0 0 8px rgba(118, 181, 120, 0.5); /* Ombre subtile autour du champ */
+}
+
+/* Bouton */
+.button2 {
+  padding: 12px;
+  height: 45px;
+  background-color: #212e94;
+  color: white;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+  border: none;
+  margin-top: 20px;
+}
+
+/* Effet hover sur le bouton */
+.button:hover {
+  background-color: #695b9e;
+  transform: translateY(-2px); /* Léger effet de soulèvement */
+  color: #fff; /* Reste blanc sur hover */
+  text-shadow: #ccc;
+}
+
+/* Disparition de l'effet hover */
+.button:not(:hover) {
+  background-color: #76b578;
+}
+
+/* Formulaire Responsif */
+@media (max-width: 500px) {
+  .container {
+    padding: 10px; /* Réduit le padding sur les petits écrans */
+  }
+  
+  .form {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .input {
+    padding: 10px;
+    font-size: 0.9rem; /* Taille de texte réduite pour plus d'accessibilité */
+  }
+
+  .button {
+    font-size: 1rem;
+  }
+}

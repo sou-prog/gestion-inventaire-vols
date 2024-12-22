@@ -1,0 +1,97 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #1f6aab;
+    --text-color: #333;
+    --border-color: #ddd;
+    --bg-color: #f9f9f9;
+    --hover-color: #f1f1f1;
+  }
+  
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 100px 0;
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  .data-table th,
+  .data-table td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    color: #010101;
+    gap: 20px;
+  }
+  
+  .data-table th {
+    background-color: var(--primary-color);
+    color: #010101;
+    font-weight: bold;
+  }
+  
+  .data-table tbody tr:nth-child(even) {
+    background-color: var(--bg-color);
+  }
+  
+  .data-table tbody tr:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .editable-input {
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+  }
+  
+  .editable-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+  }
+  
+  button {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button.btn-save {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  button.btn-save:hover {
+    background-color: #0056b3;
+  }
+  
+  button.btn-cancel {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  button.btn-cancel:hover {
+    background-color: #5a6268;
+  }
+  
+  button.btn-edit {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  button.btn-edit:hover {
+    background-color: #218838;
+  }
+  
+  button.btn-delete {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  button.btn-delete:hover {
+    background-color: #c82333;
+  }
+  

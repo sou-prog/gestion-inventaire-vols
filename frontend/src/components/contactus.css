@@ -1,0 +1,107 @@
+.contact-body{ font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("./bk.jpg") no-repeat ;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: auto;
+}
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    backdrop-filter: blur(15px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    background-color:transparent;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    resize: none;
+    transition: border-color 0.3s;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #5a08b3;
+    box-shadow: 0 0 10px rgba(90, 8, 179, 0.2);
+  }
+  
+  .contact-form button {
+    padding: 12px 20px;
+    background-color: #5a08b3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #400684;
+    transform: translateY(-2px);
+  }
+  
+  .status-message {
+    margin-top: 20px;
+    color: rgb(151, 39, 188);
+    font-weight: bold;
+  }
+  
+  @media (max-width: 500px) {
+    .contact-form {
+      padding: 20px;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 14px;
+    }
+  
+    .contact-form button {
+      font-size: 0.9rem;
+    }
+  }
+  
