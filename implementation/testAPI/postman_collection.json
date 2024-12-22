@@ -1,0 +1,132 @@
+{
+    "info": {
+      "name": "Gestion des vols - Tests API",
+      "description": "Collection de tests pour l'API de gestion des vols",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Sign up",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"username\": \"newuser\",\n  \"email\": \"newuser@example.com\",\n  \"password\": \"password123\",\n  \"role\": [\"passenger\"]\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/api/auth/signup",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["api", "auth", "signup"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Login ",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"username\": \"newuser\",\n  \"password\": \"password123\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/api/auth/login",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["api", "auth", "login"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Ajouter un vol",
+        "request": {
+          "auth": {
+            "type": "bearer",
+            "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+          },
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"volNumber\": \"12345\",\n  \"departure\": \"Paris\",\n  \"destination\": \"New York\",\n  \"date\": \"2024-12-25T10:00:00\",\n  \"price\": 500.0\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/api/vols",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["api", "vols"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Lister les vols",
+        "request": {
+          "auth": {
+            "type": "bearer",
+            "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+          },
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8080/api/vols",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["api", "vols"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Réserver un vol",
+        "request": {
+          "auth": {
+            "type": "bearer",
+            "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+          },
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"volId\": \"1\",\n  \"passengerId\": \"123\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/api/reservations",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["api", "reservations"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Annuler une réservation",
+        "request": {
+          "auth": {
+            "type": "bearer",
+            "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+          },
+          "method": "DELETE",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8080/api/reservations/1",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["api", "reservations", "1"]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  
