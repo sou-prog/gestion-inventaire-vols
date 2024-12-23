@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/v1/flight";
+const API_URL = "http://localhost:8080/api/vols";
 
 // Adds a flight by making a POST request to the API
 const addFlight = (
