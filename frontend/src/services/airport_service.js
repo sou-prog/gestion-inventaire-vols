@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/v1/airport";
+const API_URL = "http://localhost:8080/api/aeroports";
 
 // Registers a user by making a POST request to the API
 const addAirport = (airportCode, name, city, country, contactInfo) => {
